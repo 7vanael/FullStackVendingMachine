@@ -1,7 +1,8 @@
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS users;
+
 DROP TABLE IF EXISTS inventory;
+DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
 	user_id SERIAL,
@@ -17,7 +18,8 @@ CREATE TABLE inventory (
     name varchar(50) NOT NULL,
     price int NOT NULL,
     type varchar(50) NOT NULL,
-    stock int NOT NULL DEFAULT(10)
+    stock int NOT NULL DEFAULT(10),
+    image_url VARCHAR(400)
 );
 
 COMMIT TRANSACTION;

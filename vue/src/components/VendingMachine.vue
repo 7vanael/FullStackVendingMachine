@@ -1,5 +1,10 @@
 <template>
-  <div>
+  <div class="container">
+    <div class="vending_machine">
+        <div class="slot">
+            <VendingItem v-for="item in items" :key="item.id" :item="item"></VendingItem>
+        </div>
+    </div>
 
   </div>
 </template>
@@ -10,7 +15,7 @@ import VendingMachineService from '../services/VendingMachineService'
 
 export default {
     components: {
-        VendingItemVue
+        VendingItem
     },
     data() {
         return {
@@ -21,8 +26,11 @@ export default {
         VendingMachineService.getAllVendItems()
         .then(response => {
              if(response.satus == 200) {
-                this.items = response.data
+                console.log(response.data);
+                this.items = response.data;
              }
+         }).catch(error => {
+             console.log(error)
          })
     }
 }

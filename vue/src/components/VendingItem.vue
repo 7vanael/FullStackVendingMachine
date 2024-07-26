@@ -33,5 +33,14 @@ export default {
 </script>
 
 <style>
+h3 {
+    margin: 2px;
+}
+h2 {
+    margin: 2px;
+}
+p {
+    margin: 2px;
+}
 
 </style>

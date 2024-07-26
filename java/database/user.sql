@@ -3,7 +3,7 @@
 -- ********************************************************************************
 
 CREATE USER vending_machine_owner
-WITH PASSWORD 'vendingmachine';
+WITH PASSWORD 'finalcapstone';
 
 GRANT ALL
 ON ALL TABLES IN SCHEMA public
